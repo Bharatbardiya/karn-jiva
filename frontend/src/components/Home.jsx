@@ -1,58 +1,18 @@
 import React, { Fragment } from "react";
-
+import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <Fragment>
         <section className="slider_section">
           <div
             id="main_slider"
-            className="carousel slide banner-main"
-            data-ride="carousel"
+            className="  banner-main"
+            data-ride=""
           >
-            <div className="carousel-inner">
-              <div className="carousel-item active">
-                <img
-                  className="first-slide"
-                  src="assets/images/banner2.jpg"
-                  alt="First slide"
-                />
-                <div className="container">
-                  <div className="carousel-caption relative">
-                    <h1>
-                      Our <br /> <strong className="black_bold">Latest </strong>
-                      <br />
-                      <strong className="yellow_bold">Product </strong>
-                    </h1>
-                    <p>
-                      It is a long established fact that a r <br />
-                      eader will be distracted by the readable content of a page{" "}
-                    </p>
-                    <a href="#">see more Products</a>
-                  </div>
-                </div>
-              </div>
-              <div className="carousel-item">
-                <img
-                  className="second-slide"
-                  src="assets/images/banner2.jpg"
-                  alt="Second slide"
-                />
-                <div className="container">
-                  <div className="carousel-caption relative">
-                    <h1>
-                      Our <br /> <strong className="black_bold">Latest </strong>
-                      <br />
-                      <strong className="yellow_bold">Product </strong>
-                    </h1>
-                    <p>
-                      It is a long established fact that a r <br />
-                      eader will be distracted by the readable content of a page{" "}
-                    </p>
-                    <a href="#">see more Products</a>
-                  </div>
-                </div>
-              </div>
-              <div className="carousel-item">
+            <div className="">
+             
+              
+              <div className="">
                 <img
                   className="third-slide"
                   src="assets/images/banner2.jpg"
@@ -61,35 +21,19 @@ const Home = () => {
                 <div className="container">
                   <div className="carousel-caption relative">
                     <h1>
-                      Our <br /> <strong className="black_bold">Latest </strong>
+                      Karn Jiva <br /> <strong className="black_bold">Hearing And </strong>
                       <br />
-                      <strong className="yellow_bold">Product </strong>
+                      <strong className="yellow_bold">Speech Clinic </strong>
                     </h1>
-                    <p>
-                      It is a long established fact that a r <br />
-                      eader will be distracted by the readable content of a page{" "}
-                    </p>
-                    <a href="#">see more Products</a>
+                    <Link className="btn" to={'appointment'}>
+						Book Appointment
+					</Link>
+                    
                   </div>
                 </div>
               </div>
             </div>
-            <a
-              className="carousel-control-prev"
-              href="#main_slider"
-              role="button"
-              data-slide="prev"
-            >
-              <i className="fa fa-angle-right" />
-            </a>
-            <a
-              className="carousel-control-next"
-              href="#main_slider"
-              role="button"
-              data-slide="next"
-            >
-              <i className="fa fa-angle-left" />
-            </a>
+            
           </div>
         </section>
         {/* CHOOSE  */}
@@ -275,223 +219,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="product-bg">
-          <div className="product-bg-white">
-            <div className="container">
-              <div className="row">
-                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div className="product-box">
-                    <i>
-                      <img src="assets/icon/p1.png" />
-                    </i>
-                    <h3>Norton Internet Security</h3>
-                    <span>$25.00</span>
-                  </div>
-                </div>
-                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div className="product-box">
-                    <i>
-                      <img src="assets/icon/p2.png" />
-                    </i>
-                    <h3>Norton Internet Security</h3>
-                    <span>$25.00</span>
-                  </div>
-                </div>
-                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div className="product-box">
-                    <i>
-                      <img src="assets/icon/p3.png" />
-                    </i>
-                    <h3>Norton Internet Security</h3>
-                    <span>$25.00</span>
-                  </div>
-                </div>
-                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div className="product-box">
-                    <i>
-                      <img src="assets/icon/p4.png" />
-                    </i>
-                    <h3>Norton Internet Security</h3>
-                    <span>$25.00</span>
-                  </div>
-                </div>
-                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div className="product-box">
-                    <i>
-                      <img src="assets/icon/p5.png" />
-                    </i>
-                    <h3>Norton Internet Security</h3>
-                    <span>$25.00</span>
-                  </div>
-                </div>
-                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div className="product-box">
-                    <i>
-                      <img src="assets/icon/p2.png" />
-                    </i>
-                    <h3>Norton Internet Security</h3>
-                    <span>$25.00</span>
-                  </div>
-                </div>
-                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div className="product-box">
-                    <i>
-                      <img src="assets/icon/p6.png" />
-                    </i>
-                    <h3>Norton Internet Security</h3>
-                    <span>$25.00</span>
-                  </div>
-                </div>
-                <div className="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div className="product-box">
-                    <i>
-                      <img src="assets/icon/p7.png" />
-                    </i>
-                    <h3>Norton Internet Security</h3>
-                    <span>$25.00</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="Clients_bg_white">
-            <div className="container">
-              <div className="row">
-                <div className="col-md-12">
-                  <div className="title">
-                    <h3>What Clients Say?</h3>
-                  </div>
-                </div>
-              </div>
-              <div
-                id="client_slider"
-                className="carousel slide banner_Client"
-                data-ride="carousel"
-              >
-                <ol className="carousel-indicators">
-                  <li
-                    data-target="#client_slider"
-                    data-slide-to={0}
-                    className="active"
-                  />
-                  <li data-target="#client_slider" data-slide-to={1} />
-                  <li data-target="#client_slider" data-slide-to={2} />
-                </ol>
-                <div className="carousel-inner">
-                  <div className="carousel-item active">
-                    <div className="container">
-                      <div className="carousel-caption text-bg">
-                        <div className="img_bg">
-                          <i>
-                            <img src="assets/images/lllll.png" />
-                            <span>
-                              Jone Due
-                              <br />
-                              <strong className="date">12/02/2019</strong>
-                            </span>
-                          </i>
-                        </div>
-                        <p>
-                          You guys rock! Thank you for making it painless,
-                          pleasant and most of all hassle free! I wish I would
-                          have thought of it first. I am really satisfied with
-                          my first laptop service.
-                          <br />
-                          You guys rock! Thank you for making it painless,
-                          pleasant and most of all hassle free! I wish I would
-                          have thought of it first. I am{" "}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="carousel-item">
-                    <div className="container">
-                      <div className="carousel-caption text-bg">
-                        <div className="img_bg">
-                          <i>
-                            <img src="assets/images/lllll.png" />
-                            <span>
-                              Jone Due
-                              <br />
-                              <strong className="date">12/02/2019</strong>
-                            </span>
-                          </i>
-                        </div>
-                        <p>
-                          You guys rock! Thank you for making it painless,
-                          pleasant and most of all hassle free! I wish I would
-                          have thought of it first. I am really satisfied with
-                          my first laptop service.
-                          <br />
-                          You guys rock! Thank you for making it painless,
-                          pleasant and most of all hassle free! I wish I would
-                          have thought of it first. I am{" "}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="carousel-item">
-                    <div className="container">
-                      <div className="carousel-caption text-bg">
-                        <div className="img_bg">
-                          <i>
-                            <img src="assets/images/lllll.png" />
-                            <span>
-                              Jone Due
-                              <br />
-                              <strong className="date">12/02/2019</strong>
-                            </span>
-                          </i>
-                        </div>
-                        <p>
-                          You guys rock! Thank you for making it painless,
-                          pleasant and most of all hassle free! I wish I would
-                          have thought of it first. I am really satisfied with
-                          my first laptop service.
-                          <br />
-                          You guys rock! Thank you for making it painless,
-                          pleasant and most of all hassle free! I wish I would
-                          have thought of it first. I am{" "}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="container">
-            <div className="yellow_bg">
-              <div className="row">
-                <div className="col-xl-7 col-lg-7 col-md-7 col-sm-12">
-                  <div className="yellow-box">
-                    <h3>
-                      REQUEST A FREE QUOTE
-                      <i>
-                        <img src="assets/icon/calll.png" />
-                      </i>
-                    </h3>
-                    <p>Get answers and advice from people you want it from.</p>
-                  </div>
-                </div>
-                <div className="col-xl-5 col-lg-5 col-md-5 col-sm-12">
-                  <div className="yellow-box">
-                    <a href="#">Get Quote</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* end our product */}
-        {/* map */}
-        <div className="container-fluid padi">
-          <div className="map">
-            <img src="assets/images/mapimg.jpg" alt="img" />
-          </div>
-        </div>
-        {/* end map */}
-        {/*  footer */}
+      
     </Fragment>
   );
 };

@@ -27,7 +27,15 @@
 .App-link {
   color: #61dafb;
 }
-
+.blog-category {
+  border: 4px solid  #ffc221;
+} 
+.blog-category-select:hover {
+  background-color: #ffc221;
+}
+.blog-layout {
+  display: flex;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
