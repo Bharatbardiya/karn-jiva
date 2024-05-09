@@ -68,8 +68,8 @@ const Appointment = () => {
 
     return (
         <Fragment>
-            <div style={{ marginTop: "150px" }}></div>
-            <div className="container mt-5">
+            <div style={{}}></div>
+            <div className="container">
                 <div className="row" style={{ marginBottom: "100px" }}>
                     <div className="col-md-6 offset-md-3 border p-4 shadow bg-light">
                         <div className="col-12">

@@ -8,13 +8,15 @@ const About = () => {
       <div className="row">
         <dir className="col-xl-6 col-lg-6 col-md-12 col-sm-12">
           <div className="about_box">
-            <figure><img src="assets/images/pc_layout.png" alt='image'/></figure>
+            <figure><img src="assets/images/home-img4.png" alt='image'/></figure>
           </div>
         </dir>
         <dir className="col-xl-6 col-lg-6 col-md-12 col-sm-12">
           <div className="about_box">
-            <h3>Who is Lighten</h3>
-            <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum.</p>
+            <h3>What is Karn jiva</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur animi magni beatae quae, alias asperiores magnam totam, quas doloremque cumque distinctio aliquid, reiciendis recusandae quos ab! Asperiores harum fugit hic!
+            Numquam optio quisquam, quos sit eius ea vitae. Similique sint quod, repellat aspernatur corporis vel vitae cumque at sed facere porro dolore eius omnis? Quaerat temporibus nemo deleniti ipsum recusandae!
+            Ea laborum, totam fugiat delectus perspiciatis facilis ad quod! Eius eveniet modi praesentium facere perspiciatis soluta harum tempore sapiente quia id. Cupiditate earum velit recusandae quia numquam fugit molestiae inventore.</p>
             <p>Simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
           </div>
         </dir> 
@@ -22,7 +24,7 @@ const About = () => {
     </div>
   </div>
   {/* CHOOSE  */}
-  <div className="whyschose">
+  {/* <div className="whyschose">
     <div className="container">
       <div className="row">
         <div className="col-md-7 offset-md-3">
@@ -33,8 +35,8 @@ const About = () => {
         </div>
       </div>
     </div>
-  </div>
-  <div className="choose_bg">
+  </div> */}
+  {/* <div className="choose_bg">
     <div className="container">
       <div className="white_bg">
         <div className="row">
@@ -72,10 +74,10 @@ const About = () => {
         </div>
       </div>
     </div>
-  </div>
+  </div> */}
   {/* end CHOOSE */}
   {/* service */} 
-  <div className="service">
+  {/* <div className="service">
     <div className="container">
       <div className="row">
         <div className="col-md-8 offset-md-2">
@@ -130,7 +132,7 @@ const About = () => {
         </div>
       </div>
     </div>
-  </div>
+  </div> */}
   {/* end service */}
 
     </Fragment>

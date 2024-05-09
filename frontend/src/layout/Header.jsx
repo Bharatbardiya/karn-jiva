@@ -57,10 +57,6 @@ const Header = () => {
                       </li>
                       <li>
                         {" "}
-                        <Link to="/product">Product</Link>{" "}
-                      </li>
-                      <li>
-                        {" "}
                         <Link to="/blog">Blog</Link>{" "}
                       </li>
                       <li>

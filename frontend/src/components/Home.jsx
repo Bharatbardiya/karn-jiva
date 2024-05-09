@@ -9,6 +9,7 @@ const Home = () => {
             className="  banner-main"
             data-ride=""
           >
+            {/* <div className="home-bg-image"> */}
             <div className="home-bg-image">
               <div className="my-5">
                 <div className="container">
@@ -21,6 +22,9 @@ const Home = () => {
                     <Link className="btn" to={'appointment'}>
 						Book Appointment
 					</Link>
+          {/* Hearing Care</a></li>
+              <li> <a href="#">Speech Therapy</a></li>
+              <li> <a href="#">Occupational Therapy</a></li> */}
                     
                   </div>
                 </div>
@@ -36,9 +40,10 @@ const Home = () => {
               <div className="col-md-7 offset-md-3">
                 <div className="title">
                   <h2>
-                    Why <strong className="black">choose us</strong>
+                    {/* Why <strong className="black">choose us</strong> */}
+                    Services
                   </h2>
-                  <span>Fastest repair service with best price!</span>
+                  {/* <span>Fastest repair service with best price!</span> */}
                 </div>
               </div>
             </div>
@@ -48,54 +53,43 @@ const Home = () => {
           <div className="container">
             <div className="white_bg">
               <div className="row">
-                <dir className="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                <dir className="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                   <div className="for_box">
                     <i>
                       <img src="assets/icon/1.png" alt='image'/>
                     </i>
-                    <h3>Data recovery</h3>
+                    <h3>Hearing Care</h3>
                     <p>
                       Perspiciatis eos quos totam cum minima autPerspiciatis eos
                       quos
                     </p>
                   </div>
                 </dir>
-                <dir className="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                <dir className="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                   <div className="for_box">
                     <i>
                       <img src="assets/icon/2.png" alt='image'/>
                     </i>
-                    <h3>Computer repair</h3>
+                    <h3>Speech Therapy</h3>
                     <p>
                       Perspiciatis eos quos totam cum minima autPerspiciatis eos
                       quos
                     </p>
                   </div>
                 </dir>
-                <dir className="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                <dir className="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                   <div className="for_box">
                     <i>
                       <img src="assets/icon/3.png" alt='image'/>
                     </i>
-                    <h3>Mobile service</h3>
+                    <h3>Occupational Therapy</h3>
                     <p>
                       Perspiciatis eos quos totam cum minima autPerspiciatis eos
                       quos
                     </p>
                   </div>
                 </dir>
-                <dir className="col-xl-3 col-lg-3 col-md-6 col-sm-12">
-                  <div className="for_box">
-                    <i>
-                      <img src="assets/icon/4.png" alt='image'/>
-                    </i>
-                    <h3>Network solutions</h3>
-                    <p>
-                      Perspiciatis eos quos totam cum minima autPerspiciatis eos
-                      quos
-                    </p>
-                  </div>
-                </dir>
+                
                 <div className="col-md-12">
                   <a className="read-more">Read More</a>
                 </div>
@@ -105,7 +99,7 @@ const Home = () => {
         </div>
         {/* end CHOOSE */}
         {/* service */}
-        <div className="service">
+        {/* <div className="service">
           <div className="container">
             <div className="row">
               <div className="col-md-8 offset-md-2">
@@ -192,10 +186,10 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* end service */}
         {/* our product */}
-        <div className="product">
+        {/* <div className="product">
           <div className="container">
             <div className="row">
               <div className="col-md-12">
@@ -211,7 +205,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       
     </Fragment>
   );

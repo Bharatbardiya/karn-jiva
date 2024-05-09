@@ -19,9 +19,9 @@ const Footer = () => {
         <div className="col-xl-3 col-lg-3 col-md-6 col-sm-12">
           <div className="contact">
             <h3>conatct us</h3>
-            <span>123 Second Street Fifth Avenue,<br />
-              Manhattan, New York<br />
-              +987 654 3210</span>
+            <span>
+            18-B, Ashok Colony, Balaji Mod, near reliance petrol pump, Malviya Nagar, Jaipur, Rajasthan 302017
+            </span>
           </div>
         </div>
         <div className="col-xl-3 col-lg-3 col-md-6 col-sm-12">
@@ -40,17 +40,15 @@ const Footer = () => {
           <div className="contact">
             <h3>service</h3>
             <ul className="lik">
-              <li> <a href="#"> Data recovery</a></li>
-              <li> <a href="#">Computer repair</a></li>
-              <li> <a href="#">Mobile service</a></li>
-              <li> <a href="#">Network solutions</a></li>
-              <li> <a href="#">Technical support</a></li>
+              <li> <a href="#">Hearing Care</a></li>
+              <li> <a href="#">Speech Therapy</a></li>
+              <li> <a href="#">Occupational Therapy</a></li>
             </ul></div>
         </div>
         <div className="col-xl-3 col-lg-3 col-md-6 col-sm-12">
           <div className="contact">
-            <h3>About lighten</h3>
-            <span>Tincidunt elit magnis nulla facilisis. Dolor Sapien nunc amet ultrices, </span>
+            <h3>About Karn jiva</h3>
+            <span>Content</span>
           </div>
         </div>
       </div>

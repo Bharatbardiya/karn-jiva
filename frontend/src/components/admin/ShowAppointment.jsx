@@ -116,11 +116,8 @@ const ShowAppointments = () => {
 	};
 	return (
 		<Fragment>
-			<div className="row" style={{marginTop:"150px", marginBottom:"80px"}}>
-				
+			<div className="row" style={{ marginBottom:"80px"}}>
 					<Sidebar />
-				
-
 				<div className="col-12 col-lg-9 col-xl-10">
 					<Fragment>
 						<h1 className="my-3">All Appointments</h1>
