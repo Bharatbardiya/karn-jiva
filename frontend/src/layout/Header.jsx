@@ -46,7 +46,7 @@ const Header = () => {
                 <div className="limit-box">
                   <nav className="main-menu">
                     <ul className="menu-area-main">
-                      <li className="active">
+                      <li>
                         {" "}
                         <Link to={"/"}>Home</Link>{" "}
                         {/* <a href="index.html">Home</a>{" "} */}

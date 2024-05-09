@@ -9,17 +9,10 @@ const Home = () => {
             className="  banner-main"
             data-ride=""
           >
-            <div className="">
-             
-              
-              <div className="">
-                <img
-                  className="third-slide"
-                  src="assets/images/banner2.jpg"
-                  alt="Third slide"
-                />
+            <div className="home-bg-image">
+              <div className="my-5">
                 <div className="container">
-                  <div className="carousel-caption relative">
+                  <div className="">
                     <h1>
                       Karn Jiva <br /> <strong className="black_bold">Hearing And </strong>
                       <br />

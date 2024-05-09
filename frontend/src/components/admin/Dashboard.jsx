@@ -54,13 +54,13 @@ const Dashboard = () => {
 		} catch (err) {}
 	};
     return (
-<div className="container-fluid" style={{marginTop:"150px", marginBottom:"80px"}} >
+<div className="container-fluid mb-5" >
             <div className="row">
                 <Sidebar />
                 <div className="col-12 col-lg-9 col-xl-10">
                     <div className="row">
                         <div className="col-12">
-                            <div className="card my-3 me-4 bg-primary-subtle">
+                            <div className="card my-3 me-4" style={{backgroundColor:"#92c6fc"}}>
                                 <div className="card-body">
                                     <h3 className="card-title">Dashboard</h3>
                                     {/* <p className="card-text">
@@ -71,7 +71,7 @@ const Dashboard = () => {
                         </div>
                         <div className="row">
                             <div className="col-sm-6 col-lg-4 col-xl-3">
-                                <div className="card my-2 bg-success-subtle">
+                                <div className="card my-2" style={{backgroundColor:"#9ef79e"}}>
                                     <div className="card-body">
                                         <h5 className="card-title">Contact Forms</h5>
                                         <p className="card-text">
@@ -88,7 +88,7 @@ const Dashboard = () => {
                                 </div>
                             </div>
                             <div className="col-sm-6 col-lg-4 col-xl-3">
-                                <div className="card my-2 bg-warning-subtle">
+                                <div className="card my-2" style={{backgroundColor:"#f7de9e"}}>
                                     <div className="card-body">
                                         <h5 className="card-title">Appointments</h5>
                                         <p className="card-text">
@@ -105,7 +105,7 @@ const Dashboard = () => {
                                 </div>
                             </div>
                             <div className="col-sm-6 col-lg-4 col-xl-3">
-                                <div className="card my-2 bg-info-subtle">
+                                <div className="card my-2" style={{backgroundColor:"#9ef7f6"}}>
                                     <div className="card-body">
                                         <h5 className="card-title">Blogs</h5>
                                         <p className="card-text">
@@ -123,7 +123,7 @@ const Dashboard = () => {
                                 </div>
                             </div>
                             <div className="col-sm-6 col-lg-4 col-xl-3">
-                                <div className="card my-2 bg-danger-subtle">
+                                <div className="card my-2" style={{backgroundColor:"#f79ea6"}}>
                                     <div className="card-body">
                                         <h5 className="card-title">
                                             Users

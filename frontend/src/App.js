@@ -20,6 +20,7 @@ import Dashboard from "./components/admin/Dashboard";
 import ContactDetails from "./components/admin/ContactDetails";
 import ShowAppointments from "./components/admin/ShowAppointment";
 import CreateBlog from "./components/admin/CreateBlog";
+import Qchat from "./components/Qchat/Qchat";
 
 axios.defaults.baseURL =
 	process.env.BACKEND_BASE_URL || "http://localhost:4000";
@@ -54,6 +55,7 @@ function App() {
 						path="/admin/appointment"
 						element={<ShowAppointments />}
 					/>
+					<Route path="/qchat" element= {<Qchat/>}/>
 				</Routes>
 				<Footer />
 			</Router>
