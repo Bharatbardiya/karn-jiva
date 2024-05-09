@@ -3,103 +3,98 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <Fragment>
-        <section className="slider_section">
-          <div
-            id="main_slider"
-            className="  banner-main"
-            data-ride=""
-          >
-            {/* <div className="home-bg-image"> */}
-            <div className="home-bg-image">
-              <div className="my-5">
-                <div className="container">
-                  <div className="">
-                    <h1>
-                      Karn Jiva <br /> <strong className="black_bold">Hearing And </strong>
-                      <br />
-                      <strong className="yellow_bold">Speech Clinic </strong>
-                    </h1>
-                    <Link className="btn" to={'appointment'}>
-						Book Appointment
-					</Link>
-          {/* Hearing Care</a></li>
+      <section className="slider_section">
+        <div id="main_slider" className="  banner-main" data-ride="">
+          {/* <div className="home-bg-image"> */}
+          <div className="home-bg-image">
+            <div className="my-5">
+              <div className="container">
+                <div className="">
+                  <h1>
+                    Karn Jiva <br />{" "}
+                    <strong className="black_bold">Hearing And </strong>
+                    <br />
+                    <strong className="yellow_bold">Speech Clinic </strong>
+                  </h1>
+                  <Link className="btn btn-primary" to={"appointment"}>
+                    Book Appointment
+                  </Link>
+                  {/* Hearing Care</a></li>
               <li> <a href="#">Speech Therapy</a></li>
               <li> <a href="#">Occupational Therapy</a></li> */}
-                    
-                  </div>
                 </div>
               </div>
             </div>
-            
           </div>
-        </section>
-        {/* CHOOSE  */}
-        <div className="whyschose">
-          <div className="container">
+        </div>
+      </section>
+      {/* CHOOSE  */}
+      <div className="whyschose">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-7 offset-md-3">
+              <div className="title">
+                <h2>
+                  {/* Why <strong className="black">choose us</strong> */}
+                  Services
+                </h2>
+                {/* <span>Fastest repair service with best price!</span> */}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="choose_bg">
+        <div className="container">
+          <div className="white_bg">
             <div className="row">
-              <div className="col-md-7 offset-md-3">
-                <div className="title">
-                  <h2>
-                    {/* Why <strong className="black">choose us</strong> */}
-                    Services
-                  </h2>
-                  {/* <span>Fastest repair service with best price!</span> */}
+              <dir className="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                <div className="for_box">
+                  <i>
+                    <img src="assets/icon/1.png" alt="image" />
+                  </i>
+                  <h3>Hearing Care</h3>
+                  <p>
+                    Perspiciatis eos quos totam cum minima autPerspiciatis eos
+                    quos
+                  </p>
                 </div>
+              </dir>
+              <dir className="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                <div className="for_box">
+                  <i>
+                    <img src="assets/icon/2.png" alt="image" />
+                  </i>
+                  <h3>Speech Therapy</h3>
+                  <p>
+                    Perspiciatis eos quos totam cum minima autPerspiciatis eos
+                    quos
+                  </p>
+                </div>
+              </dir>
+              <dir className="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                <div className="for_box">
+                  <i>
+                    <img src="assets/icon/3.png" alt="image" />
+                  </i>
+                  <h3>Occupational Therapy</h3>
+                  <p>
+                    Perspiciatis eos quos totam cum minima autPerspiciatis eos
+                    quos
+                  </p>
+                </div>
+              </dir>
+
+              <div className="col-md-12">
+                <a className="read-more">Read More</a>
               </div>
             </div>
           </div>
         </div>
-        <div className="choose_bg">
-          <div className="container">
-            <div className="white_bg">
-              <div className="row">
-                <dir className="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                  <div className="for_box">
-                    <i>
-                      <img src="assets/icon/1.png" alt='image'/>
-                    </i>
-                    <h3>Hearing Care</h3>
-                    <p>
-                      Perspiciatis eos quos totam cum minima autPerspiciatis eos
-                      quos
-                    </p>
-                  </div>
-                </dir>
-                <dir className="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                  <div className="for_box">
-                    <i>
-                      <img src="assets/icon/2.png" alt='image'/>
-                    </i>
-                    <h3>Speech Therapy</h3>
-                    <p>
-                      Perspiciatis eos quos totam cum minima autPerspiciatis eos
-                      quos
-                    </p>
-                  </div>
-                </dir>
-                <dir className="col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                  <div className="for_box">
-                    <i>
-                      <img src="assets/icon/3.png" alt='image'/>
-                    </i>
-                    <h3>Occupational Therapy</h3>
-                    <p>
-                      Perspiciatis eos quos totam cum minima autPerspiciatis eos
-                      quos
-                    </p>
-                  </div>
-                </dir>
-                
-                <div className="col-md-12">
-                  <a className="read-more">Read More</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* end CHOOSE */}
-        {/* service */}
-        {/* <div className="service">
+      </div>
+      {/* end CHOOSE */}
+      {/* service */}
+      {/* <div className="service">
           <div className="container">
             <div className="row">
               <div className="col-md-8 offset-md-2">
@@ -187,9 +182,9 @@ const Home = () => {
             </div>
           </div>
         </div> */}
-        {/* end service */}
-        {/* our product */}
-        {/* <div className="product">
+      {/* end service */}
+      {/* our product */}
+      {/* <div className="product">
           <div className="container">
             <div className="row">
               <div className="col-md-12">
@@ -206,7 +201,6 @@ const Home = () => {
             </div>
           </div>
         </div> */}
-      
     </Fragment>
   );
 };
