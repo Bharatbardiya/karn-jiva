@@ -35,6 +35,7 @@
 }
 .blog-layout {
   display: flex;
+  flex-wrap: wrap;
 }
 @keyframes App-logo-spin {
   from {
@@ -47,8 +48,12 @@
 
 
 .home-bg-image{
-  background: url(../public/assets/images/banner2.jpg) no-repeat center center fixed;
+  background: url(../public/assets/images/banner2.jpg) no-repeat center center;
   background-size: cover;
   width: 100%;
   overflow: hidden;
+}
+
+.yellow-bg{
+  background-color: #ffc221;
 }
