@@ -205,7 +205,7 @@
     }
     .banner-main .carousel-caption h1 {
         color: #020000;
-        font-size: 32px;
+        font-size: 30px;
 
 line-height: 37px;
       
@@ -269,8 +269,8 @@ padding: 1px 0px 1px 0px;
     }
     .banner-main .carousel-caption h1 {
 
-    font-size: 45px;
-    line-height: 50px;
+    font-size: 37px;
+    line-height: 40px;
     color: #020000;
     padding-top: 0px;
 }
@@ -322,8 +322,8 @@ padding: 1px 0px 1px 0px;
         bottom: 0;
     }
     .banner-main .carousel-caption h1 {
-        font-size: 40px;
-        line-height: 50px;
+        font-size: 25px;
+        line-height: 40px;
        margin-bottom: 1px;
     }
     .banner-main .carousel-caption p {

@@ -1716,8 +1716,8 @@ font-size: 18px;
 }
 .banner-main .carousel-caption h1 {
 	color: #020000;
-	font-size: 85px;
-   line-height: 90px;
+	font-size: 45px;
+   line-height: 50px;
 	text-transform: uppercase;
 }
 .banner-main .carousel-caption p {
@@ -1853,7 +1853,7 @@ margin-top: 40px;
 }
 
 .service .service-box i img {
-	height: 88px;
+	height: 130px;
 }
 
 .service .service-box h3 {
@@ -1861,7 +1861,7 @@ margin-top: 40px;
 	font-size: 22px;
 	line-height: 22px;
 	color: #050000;
-	padding: 20px 0px;
+	padding: 15px 0px 5px 0;
 }
 
 

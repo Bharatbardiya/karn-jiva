@@ -231,7 +231,7 @@ const AutismDetectionForm = () => {
   };
 
   return (
-    <div className="form-container my-3">
+    <div className="qchat form-container my-3">
       <h1 className='font-weight-bold'>Autism Detection Screening Tool</h1>
       <form >
         <div className="question">

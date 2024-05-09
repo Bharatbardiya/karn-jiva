@@ -1,33 +1,31 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
+import KarnJivaTeam from "./Karn/KarnJivaTeam";
 const Home = () => {
   return (
     <Fragment>
-      <section className="slider_section">
-        <div id="main_slider" className="  banner-main" data-ride="">
-          {/* <div className="home-bg-image"> */}
-          <div className="home-bg-image">
-            <div className="my-5">
-              <div className="container">
-                <div className="">
-                  <h1>
-                    Karn Jiva <br />{" "}
-                    <strong className="black_bold">Hearing And </strong>
-                    <br />
-                    <strong className="yellow_bold">Speech Clinic </strong>
-                  </h1>
-                  <Link className="btn btn-primary" to={"appointment"}>
-                    Book Appointment
-                  </Link>
-                  {/* Hearing Care</a></li>
-              <li> <a href="#">Speech Therapy</a></li>
-              <li> <a href="#">Occupational Therapy</a></li> */}
-                </div>
-              </div>
-            </div>
+    <div className="main-layout">
+    <section className="slider_section">
+  <div id="main_slider" className="carousel slide banner-main" data-ride="carousel">
+    <div className="carousel-inner">
+      <div className="carousel-item active">
+        <img className="first-slide" src="assets/images/banner2.jpg" alt="First slide" />
+        <div className="container">
+          <div className="carousel-caption relative">
+            <h1 style={{textAlign:"left"}}>Our <br /> <strong className="black_bold">Latest </strong><br />
+              <strong className="yellow_bold">Product </strong></h1>
+              <Link className="btn btn-warning" style={{display:"flex", paddingLeft:"15px"}} to={"appointment"}>
+                Book Appointment
+              </Link>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
       </section>
+    </div>
+     
+
       {/* CHOOSE  */}
       <div className="whyschose">
         <div className="container">
@@ -94,94 +92,7 @@ const Home = () => {
       </div>
       {/* end CHOOSE */}
       {/* service */}
-      {/* <div className="service">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-8 offset-md-2">
-                <div className="title">
-                  <h2>
-                    Service <strong className="black">Process</strong>
-                  </h2>
-                  <span>Easy and effective way to get your device repair</span>
-                </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                <div className="service-box">
-                  <i>
-                    <img src="assets/icon/service1.png" alt='image'/>
-                  </i>
-                  <h3>Fast service</h3>
-                  <p>
-                    Exerci tation ullamcorper suscipit lobortis nisl ut aliquip
-                    ex ea{" "}
-                  </p>
-                </div>
-              </div>
-              <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                <div className="service-box">
-                  <i>
-                    <img src="assets/icon/service2.png" alt='image'/>
-                  </i>
-                  <h3>Secure payments</h3>
-                  <p>
-                    Exerci tation ullamcorper suscipit lobortis nisl ut aliquip
-                    ex ea{" "}
-                  </p>
-                </div>
-              </div>
-              <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                <div className="service-box">
-                  <i>
-                    <img src="assets/icon/service3.png" alt='image'/>
-                  </i>
-                  <h3>Expert team</h3>
-                  <p>
-                    Exerci tation ullamcorper suscipit lobortis nisl ut aliquip
-                    ex ea{" "}
-                  </p>
-                </div>
-              </div>
-              <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                <div className="service-box">
-                  <i>
-                    <img src="assets/icon/service4.png" alt='image'/>
-                  </i>
-                  <h3>Affordable services</h3>
-                  <p>
-                    Exerci tation ullamcorper suscipit lobortis nisl ut aliquip
-                    ex ea{" "}
-                  </p>
-                </div>
-              </div>
-              <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                <div className="service-box">
-                  <i>
-                    <img src="assets/icon/service5.png" alt='image'/>
-                  </i>
-                  <h3>90 Days warranty</h3>
-                  <p>
-                    Exerci tation ullamcorper suscipit lobortis nisl ut aliquip
-                    ex ea{" "}
-                  </p>
-                </div>
-              </div>
-              <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                <div className="service-box">
-                  <i>
-                    <img src="assets/icon/service6.png" alt='image'/>
-                  </i>
-                  <h3>Award winning</h3>
-                  <p>
-                    Exerci tation ullamcorper suscipit lobortis nisl ut aliquip
-                    ex ea{" "}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
+      <KarnJivaTeam/>
       {/* end service */}
       {/* our product */}
       {/* <div className="product">

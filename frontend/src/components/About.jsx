@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import KarnJivaTeam from './Karn/KarnJivaTeam'
 
 const About = () => {
   return (
@@ -76,65 +77,7 @@ const About = () => {
     </div>
   </div> */}
   {/* end CHOOSE */}
-  {/* service */} 
-  {/* <div className="service">
-    <div className="container">
-      <div className="row">
-        <div className="col-md-8 offset-md-2">
-          <div className="title">
-            <h2>service <strong className="black">proces</strong></h2>
-            <span>Easy and effective way to get your device repaired.</span>
-          </div>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-          <div className="service-box">
-            <i><img src="assets/icon/service1.png" alt='image'/></i>
-            <h3>Fast service</h3>
-            <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-          </div>
-        </div>
-        <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-          <div className="service-box">
-            <i><img src="assets/icon/service2.png" alt='image'/></i>
-            <h3>Secure payments</h3>
-            <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-          </div>
-        </div>
-        <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-          <div className="service-box">
-            <i><img src="assets/icon/service3.png" alt='image'/></i>
-            <h3>Expert team</h3>
-            <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-          </div>
-        </div>
-        <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-          <div className="service-box">
-            <i><img src="assets/icon/service4.png" alt='image'/></i>
-            <h3>Affordable services</h3>
-            <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-          </div>
-        </div>
-        <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-          <div className="service-box">
-            <i><img src="assets/icon/service5.png" alt='image'/></i>
-            <h3>90 Days warranty</h3>
-            <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-          </div>
-        </div>
-        <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-          <div className="service-box">
-            <i><img src="assets/icon/service6.png" alt='image'/></i>
-            <h3>Award winning</h3>
-            <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> */}
-  {/* end service */}
-
+    <KarnJivaTeam/>
     </Fragment>
   )
 }
