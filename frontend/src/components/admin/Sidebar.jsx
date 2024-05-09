@@ -8,6 +8,7 @@ const Sidebar = () => {
             style={{ borderRadius: "0 4px 0 0" }}
         >
             <ul className="nav nav-pills flex-column mb-auto">
+                
                 <li>
                     <Link to="/" className="nav-link link-dark">
                         <i className="bi bi-house-door pe-2 fs-5"></i>
@@ -21,13 +22,13 @@ const Sidebar = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/admin/appointment" className="nav-link link-dark">
+                    <Link to="/AppointmentAdmin" className="nav-link link-dark">
                         <i className="bi bi-grid pe-2 fs-5"></i>
                         Appointments
                     </Link>
                 </li>
                 <li>
-                    <Link to="/admin/contact" className="nav-link link-dark">
+                    <Link to="/contactAdmin" className="nav-link link-dark">
                         <i className="bi bi-grid pe-2 fs-5"></i>
                         Contact form
                     </Link>
@@ -39,7 +40,7 @@ const Sidebar = () => {
                     </Link>
                 </li> */}
                 <li>
-                    <Link to="/admin/createBlog" className="nav-link link-dark ">
+                    <Link to="/createBlogAdmin" className="nav-link link-dark ">
                         <i className="bi bi-star pe-2 fs-5"></i>
                         Blogs
                     </Link>

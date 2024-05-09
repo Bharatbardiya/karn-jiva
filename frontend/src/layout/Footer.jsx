@@ -28,11 +28,11 @@ const Footer = () => {
           <div className="contact">
             <h3>ADDITIONAL LINKS</h3>
             <ul className="lik">
-              <li> <a href="#">About us</a></li>
+              <li> <a href="about">About us</a></li>
               <li> <a href="#">Terms and conditions</a></li>
               <li> <a href="#">Privacy policy</a></li>
               <li> <a href="#">News</a></li>
-              <li> <a href="#">Contact us</a></li>
+              <li> <a href="/contact">Contact us</a></li>
             </ul>
           </div>
         </div>
@@ -54,7 +54,7 @@ const Footer = () => {
       </div>
     </div>
     <div className="copyright">
-      <p>Copyright 2019 All Right Reserved By <a href="https://html.design/">Free html Templates</a> Distributed By <a href="https://themewagon.com">ThemeWagon </a></p>
+      <p>Copyright 2024 All Right Reserved By Karn jiva Hearing and Speech clinic</p>
     </div>
   </div>
 </footer>

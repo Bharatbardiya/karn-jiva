@@ -121,7 +121,6 @@ const ShowAppointments = () => {
 				<div className="col-12 col-lg-9 col-xl-10">
 					<Fragment>
 						<h1 className="my-3">All Appointments</h1>
-
 						{
 							<MDBDataTable
 								data={setOrders()}

@@ -49,12 +49,15 @@ function App() {
 						element={<Appointment />}
 					></Route>
 					<Route path="/dashboard" element={<Dashboard />} />
-					<Route path="/admin/contact" element={<ContactDetails />} />
-					<Route path="/admin/createBlog" element={<CreateBlog />} />
-					<Route
+					<Route path="/AppointmentAdmin" element={<ShowAppointments />} />
+
+					<Route path="/contactAdmin" element={<ContactDetails />} />
+					<Route path="/createBlogAdmin" element={<CreateBlog />} />
+					<Route path="/qchat" element={<Qchat />} />
+					{/* <Route
 						path="/admin/appointment"
 						element={<ShowAppointments />}
-					/>
+					/> */}
 					<Route path="/qchat" element= {<Qchat/>}/>
 				</Routes>
 				<Footer />

@@ -61,6 +61,10 @@ const Header = () => {
                       </li>
                       <li>
                         {" "}
+                        <Link to="/qchat">Autism Detection</Link>{" "}
+                      </li>
+                      <li>
+                        {" "}
                         <Link to="/contact">Contact</Link>{" "}
                       </li>
                       {user ? (
@@ -70,7 +74,6 @@ const Header = () => {
                           </a>
 
                           <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <Link to={"/profile"} className="dropdown-item">profile</Link>
                             {user && user?.role==="admin" && <Link to={"/dashboard"} className="dropdown-item">Dashboad</Link>}
                             <a className="dropdown-item" onClick={logoutHandler}>Logout</a>
                           </div>
