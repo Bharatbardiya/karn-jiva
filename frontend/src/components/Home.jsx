@@ -9,11 +9,11 @@ const Home = () => {
   <div id="main_slider" className="carousel slide banner-main" data-ride="carousel">
     <div className="carousel-inner">
       <div className="carousel-item active">
-        <img className="first-slide" src="assets/images/banner2.jpg" alt="First slide" />
+        <img className="first-slide" src="assets/images/banner2.jpeg" alt="First slide" style={{width:"100%"}}/>
         <div className="container">
           <div className="carousel-caption relative">
-            <h1 style={{textAlign:"left"}}>Our <br /> <strong className="black_bold">Latest </strong><br />
-              <strong className="yellow_bold">Product </strong></h1>
+            <h1 style={{textAlign:"left"}}>Karn Jiva<br /> <strong className="black_bold">Hearing </strong><br />
+              <strong className="yellow_bold">& Speech Clinic </strong></h1>
               <Link className="btn btn-warning" style={{display:"flex", paddingLeft:"15px"}} to={"appointment"}>
                 Book Appointment
               </Link>

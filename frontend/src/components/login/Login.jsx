@@ -17,6 +17,10 @@ const Login = () => {
   const submitHandler = (e) => {
       console.log("hdklfsdl");
       e.preventDefault();
+      if(email === "" || password === ""){
+          alert("All fields are required");
+          return;
+      }
       // console.log(email, password);
       dispatch(login(email, password));
   };

@@ -166,10 +166,12 @@ const MchatASDTest = () => {
       if(positiveAnswer.includes(key) && formData[key]==="yes"){
         score++;
       }
-      else if( formData[key]==="no"){
+      else if(!positiveAnswer.includes(key) &&  formData[key]==="no"){
         score++;
       }
     }
+    console.log("score : ", score)
+    // console.log(formData)
     if (score <= 2){
        setApiResult(0)
         setApiMessage("Based on the analysis, it appears that you may not have Autism Spectrum Disorder (ASD). However, if you have any concerns or questions about your mental health or behavior, we encourage you to consult with a healthcare professional for personalized guidance and support.");
@@ -228,9 +230,9 @@ const MchatASDTest = () => {
       </form>
       {
         apiResult !== -1 && (
-            <div class="container mt-5">
-    <div class="row justify-content-center">
-      <div class="col-md-6"></div>
+            <div className="container mt-5">
+    <div className="row justify-content-center">
+      <div className="col-md-6"></div>
             <div className="card">
      <a className='btn btn-primary text-white mt-3 ml-3' style={{width:"100px"}} onClick={()=>(setApiResult(-1))}>Clear</a>
                 <div className="card-body">
