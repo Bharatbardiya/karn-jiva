@@ -21,6 +21,7 @@ import ContactDetails from "./components/admin/ContactDetails";
 import ShowAppointments from "./components/admin/ShowAppointment";
 import CreateBlog from "./components/admin/CreateBlog";
 import Qchat from "./components/Qchat/Qchat";
+import MchatASDTest from "./components/Mchat/Mchat";
 
 axios.defaults.baseURL = "http://localhost:4000";
 axios.defaults.withCredentials = true;
@@ -58,6 +59,7 @@ function App() {
 						element={<ShowAppointments />}
 					/> */}
 					<Route path="/qchat" element= {<Qchat/>}/>
+					<Route path="/mchat" element= {<MchatASDTest/>} />
 				</Routes>
 				<Footer />
 			</Router>
