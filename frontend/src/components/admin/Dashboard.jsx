@@ -78,7 +78,7 @@ const Dashboard = () => {
                                             {contactData?.length}
                                         </p>
                                         <Link
-                                            to="/admin/contact"
+                                            to="/contactAdmin"
                                             className="btn btn-primary"
                                         >
                                             View{" "}
@@ -95,7 +95,7 @@ const Dashboard = () => {
                                             {appointmentData?.length}
                                         </p>
                                         <Link
-                                            to="/admin/appointment"
+                                            to="/AppointmentAdmin"
                                             className="btn btn-primary"
                                         >
                                             View{" "}
@@ -113,7 +113,7 @@ const Dashboard = () => {
                                             
                                         </p>
                                         <Link
-                                            to="/admin/createBlog"
+                                            to="/createBlogAdmin"
                                             className="btn btn-primary"
                                         >
                                             View{" "}

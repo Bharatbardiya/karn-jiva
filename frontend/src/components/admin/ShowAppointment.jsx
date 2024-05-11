@@ -62,10 +62,13 @@ const ShowAppointments = () => {
 			rows: [],
 		};
 		appointmentData?.forEach((appoint) => {
+			let date1 = new Date(appoint?.fromDate);
+			let date2 = new Date(appoint?.toDate);
 			data.rows.push({
 				name: appoint?.name,
 				email: appoint?.email,
                 appointmentType: appoint?.serviceType,
+				time: date1.toLocaleDateString() + " to " + date2.toLocaleDateString(),
 				actions: (
 					<Fragment>
 						<Link className="btn btn-primary py-1 px-2" onClick={() => setShow(true)}>

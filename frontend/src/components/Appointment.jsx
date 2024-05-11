@@ -5,6 +5,9 @@ import Button from "react-bootstrap/Button";
 import { Navigate, useNavigate, Link } from "react-router-dom";
 import Modal from "react-bootstrap/Modal";
 import axios from "axios";
+import toast from "react-hot-toast";
+var {validate, res} = require("react-email-validator")
+
 
 const Appointment = () => {
     const dispatch = useDispatch();
@@ -29,8 +32,59 @@ const Appointment = () => {
         });
         // console.log(formData);
     };
+    const validateForm = (formData) => {
+        let isValid = true;
+        let validationMessage = "";
+        if (formData["Name"] === "") {
+            validationMessage += "Name is required\n";
+            isValid = false;
+        }
+        if (formData["PhoneNo"] === "") {
+            validationMessage += "Phone Number is required\n";
+            isValid = false;
+        }
+        if (formData["Email"] === "") {
+            validationMessage += "Email is required\n";
+            isValid = false;
+        }
+        if (formData["Date1"] === "") {
+            validationMessage += "Date is required\n";
+            isValid = false;
+        }
+        if (formData["Date2"] === "") {
+            validationMessage += "Date is required\n";
+            isValid = false;
+        }
+        if (formData["Service"] === "" || formData["Service"] === "select") {
+            validationMessage += "Service is required\n";
+            isValid = false;
+        }
+        if (formData["Message"] === "") {
+            validationMessage += "Message is required\n";
+            isValid = false;
+        }
+        res = validate(formData["Email"])
+        if (!res) {
+            validationMessage += "Email is not valid\n";
+            isValid = false;
+        }
+        if (String(formData["PhoneNo"]).length < 10) {
+            validationMessage += "Phone Number is not valid\n";
+            isValid = false;
+        }
+        if (!isValid) {
+            toast.error(validationMessage);
+            return false;
+        }
+        return true;
+    }
     const handleSubmit = async (event) => {
+        console.log(typeof formData["Date1"])
         event.preventDefault();
+        if (!validateForm(formData)){
+            return;
+        }
+
         console.log(formData);
         const config = {
             headers: {
@@ -59,12 +113,6 @@ const Appointment = () => {
             navigate("/login");
         }
     }, [isAuthenticated]);
-
-    const handleAppointment = () => {
-        if (!isAuthenticated) {
-            navigate("/login");
-        }
-    };
 
     return (
         <Fragment>
@@ -145,14 +193,17 @@ const Appointment = () => {
                                         onChange={handleChange}
                                         defaultValue={"service 1"}
                                     >
-                                        <option value={"service 1"}>
-                                            service 1
+                                        <option value={"select"} defaultChecked>
+                                            Select Service
                                         </option>
-                                        <option value={"service 2"}>
-                                            service 2
+                                        <option value={"Hearing Care"}>
+                                            Hearing Care
                                         </option>
-                                        <option value={"service 3"}>
-                                            service 3
+                                        <option value={"Speech Therapy"}>
+                                            Speech Therapy
+                                        </option>
+                                        <option value={"Occupational Therapy"}>
+                                            Occupational Therapy
                                         </option>
                                     </select>
                                 </div>

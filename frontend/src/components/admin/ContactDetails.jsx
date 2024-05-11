@@ -78,7 +78,10 @@ const ContactDetails = () => {
 									<Modal.Title>Message</Modal.Title>
 								</Modal.Header>
 								<Modal.Body>
-									{contact?.message}
+									<p>Name : {contact?.name} </p>
+									<p>Email : {contact?.email} </p>
+									<p>Message : {contact?.message} </p>
+									<p>Phone No. : {contact?.phoneNo} </p>
 								</Modal.Body>
 								<Modal.Footer>
 									<Button

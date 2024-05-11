@@ -32,7 +32,7 @@ const Login = () => {
           navigate("/");
       }
       if (error) {
-          toast.error(error);
+          alert(error)
           dispatch(clearErrors());
       }
   }, [navigate, error, dispatch, isAuthenticated]);
