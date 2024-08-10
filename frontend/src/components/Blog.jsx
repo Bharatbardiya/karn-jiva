@@ -10,9 +10,6 @@ const Blog = () => {
   const [blogArrayC2, setBlogArray2] = useState([]);
   const [blogArrayC3, setBlogArray3] = useState([]);
   const [blogCategory, setBlogCategory] = useState("Hearing Care");
-  let array1 = [];
-  let array2 = [];
-  let array3 = [];
 
   useEffect(() => {
     getData();
@@ -23,8 +20,11 @@ const Blog = () => {
   }
   const getData = async () => {
     try {
-      const { data } = await axios.get("/api/v1//getAllBlogs");
-      // console.log("data", data)
+      const { data } = await axios.get("/api/v1/getAllBlogs");
+      console.log("data", data)
+      let array1 = [];
+      let array2 = [];
+      let array3 = [];
       // console.log( data.blogs[0]);
 
       data?.blogs.forEach((el) => {
@@ -41,9 +41,12 @@ const Blog = () => {
       setBlogArray1(array1);
       setBlogArray2(array2);
       setBlogArray3(array3);
-      console.log("blogarry:" + JSON.stringify(blogArrayC1));
+      
     } catch (err) {}
   };
+  useEffect(()=>{
+    console.log( blogArrayC1);
+  },[blogArrayC1]);
   const [active, setActive] = useState({
     hearing: true,
     speech: false,
