@@ -82,10 +82,6 @@ const Home = () => {
                   </p>
                 </div>
               </dir>
-
-              <div className="col-md-12">
-                <a className="read-more">Read More</a>
-              </div>
             </div>
           </div>
         </div>

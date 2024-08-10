@@ -61,7 +61,7 @@ const Header = () => {
                       </li>
                       <li>
                         {" "}
-                        <Link to="/qchat">Autism Detection</Link>{" "}
+                        <Link to="/mchat">Autism Detection</Link>{" "}
                       </li>
                       <li>
                         {" "}
