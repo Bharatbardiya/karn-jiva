@@ -4,8 +4,9 @@ const Blog = require("../models/blog");
 const Appointment = require("../models/appointments");
 const ErrorHandler = require("../utils/errorHandler");
 const sendEmail = require("../utils/sendEmail");
+const multer = require("multer");
+const path = require('path');
 // api/v1/addReview
-
 exports.addBlog = async (req, res, next) => {
     try {
         const { blogTitle,blogContent, category } = req.body;
@@ -146,5 +147,36 @@ exports.CountBlogs = async (req, res, next) => {
         });
     } catch (error) {
         return next(new ErrorHandler(error.message,500));
+    }
+}
+
+exports.storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, 'frontend/public/uploads');
+    },
+    filename: function (req, file, cb) {
+        console.log(file.originalname);
+      cb(null, Date.now() + path.extname(file.originalname));
+    }
+});
+
+exports.createBlog =async (req, res) => {
+    const { title, description, category } = req.body;
+    const imagePath = req.file.path;
+    image_name = imagePath.split('/').slice(-1)[0]
+    console.log(req.file.path)
+    console.log(req.body)
+    try {
+      const post = await Blog.create({
+        blogTitle: title,
+        blogContent: description,
+        category: category,
+        imagePath: image_name,
+      });
+      console.log(post);
+      await post.save();
+      res.status(201).json({ message: 'Post created successfully', post });
+    } catch (error) {
+      res.status(500).json({ message: 'Error creating post', error });
     }
 }

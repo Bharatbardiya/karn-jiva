@@ -22,6 +22,7 @@ import ShowAppointments from "./components/admin/ShowAppointment";
 import CreateBlog from "./components/admin/CreateBlog";
 import Qchat from "./components/Qchat/Qchat";
 import MchatASDTest from "./components/Mchat/Mchat";
+import BlogForm from "./components/CreateBlog";
 import {Toaster} from 'react-hot-toast';
 import ForgetPassword from "./components/login/ForgetPassword";
 import ResetPassword from "./components/login/ResetPassword";
@@ -42,6 +43,7 @@ function App() {
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/blog" element={<Blog />} />
+					<Route path="/createblog" element={<BlogForm />} />
 					<Route path="/contact" element={<Contact />} />
 					<Route path="/about" element={<About />} />
 					<Route path="/product" element={<Product />} />

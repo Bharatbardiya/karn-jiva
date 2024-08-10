@@ -12,8 +12,13 @@ const {
     bookAppointment,
     findAppointment,
     deleteAppointment,
-    CountBlogs
+    CountBlogs,
+    createBlog,
+    storage
 } = require("../controllers/blogController");
+
+const multer = require("multer");
+const upload = multer({storage: storage});
 
 router.route("/admin/findContact").get(findContact);
 router.route("/admin/findAppointment").get(findAppointment);
@@ -23,8 +28,8 @@ router.route("/admin/deleteAppointment/:id").delete(deleteAppointment);
 router.route("/admin/createBlog").post(addBlog);
 router.route("/bookAppointment").post(bookAppointment);
 router.route("/getAllBlogs").get(showBlogs);
-router.route("/countBlog").get(CountBlogs)
-
+router.route("/countBlog").get(CountBlogs);
+router.route("/createblog").post( upload.single('image'), createBlog);
 
 
 module.exports = router;
