@@ -42,7 +42,7 @@ const ResetPassword = () => {
       catch (err) {
         alert("Error")
       }
-
+      navigate("/login");
     //   dispatch(login(email, password));
   };
   const navigateLogin = (e) =>{
@@ -88,7 +88,7 @@ const ResetPassword = () => {
                 />
               </div>
               <div className="col-md-12">
-                <input className="form-control" placeholder="password" name="confirm password" 
+                <input className="form-control" placeholder="confirm password" name="confirm password" 
                   value={confirmPassword}
                   onChange={(e)=>{setConfirmPassword(e.target.value);}}
                 />
@@ -98,7 +98,7 @@ const ResetPassword = () => {
                 onClick={navigateLogin}>Login</Link>
               </div> */}
               <div className=" col-md-12">
-                <button className="send" onClick={submitHandler} >Login</button>
+                <button className="send" onClick={submitHandler} >Reset Password</button>
               </div>
             </div>
           </form>
