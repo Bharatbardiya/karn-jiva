@@ -2,43 +2,72 @@ import React, { Fragment, useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
-import { login, clearErrors } from "../../actions/userActions";
+import axios from "axios";
+import { login, clearErrors , forgotPassword } from "../../actions/userActions";
 
-const Login = () => {
+const ForgetPassword = () => {
   const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { isAuthenticated, error, loading } = useSelector(
       (state) => state.auth
   );
+//   const dispatch = useDispatch();
 
-  const submitHandler = (e) => {
-      console.log("hdklfsdl");
-      e.preventDefault();
-      if(email === "" || password === ""){
-          alert("All fields are required");
-          return;
-      }
-      // console.log(email, password);
-      dispatch(login(email, password));
-  };
-  const navigateSignup = (e) =>{
-      navigate("/signup");
-  }
-  const navigateForgetPassword = (e) =>{
-    navigate("/forgetpassword");
-}
+//   const {  error , loading ,  message } = useSelector(state => state.forgotPassword)
+
   useEffect(() => {
-      if (isAuthenticated) {
-          navigate("/");
-      }
+
       if (error) {
-          alert(error)
+          alert("something went wrong")
           dispatch(clearErrors());
       }
-  }, [navigate, error, dispatch, isAuthenticated]);
+
+      
+
+  }, [dispatch])
+
+  const submitHandler = async (e) => {
+      e.preventDefault();
+      if(email === ""){
+        alert("All fields are required");
+        return;
+    }
+      const formData = new FormData();
+      formData.set('email', email);
+    console.log(email)
+    try {
+
+        const config = {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }
+    
+        const { data } = await axios.post('/api/v1/password/forgot', formData, config)
+          alert("mail has been sent successfully")
+    }
+    catch (err) {
+        console.log(err.message)
+        alert("error");
+    }
+    //   dispatch(forgotPassword(formData))
+  }
+  
+  const navigateSignup = (e) =>{
+      navigate("/login");
+  }
+ 
+//   useEffect(() => {
+//       if (isAuthenticated) {
+//           navigate("/");
+//       }
+//       if (error) {
+//           alert(error)
+//           dispatch(clearErrors());
+//       }
+//   }, [navigate, error, dispatch, isAuthenticated]);
 
   return (
     <Fragment>
@@ -47,7 +76,7 @@ const Login = () => {
       <div className="row">
         <div className="col-md-12">
           <div className="titlepage">
-            <h2>Login</h2>
+            <h2>Forget Password</h2>
           </div>
         </div>
       </div>
@@ -66,22 +95,12 @@ const Login = () => {
                   onChange={(e)=>{setEmail(e.target.value);}}
                 />
               </div>
-              <div className="col-md-12">
-                <input className="form-control" placeholder="password" name="password" 
-                  value={password}
-                  onChange={(e)=>{setPassword(e.target.value);}}
-                />
-              </div>
               <div className="col-md-12" style={{display:"flex", justifyContent:"center", marginBottom:"10px", fontSize:"1.1rem"}}>
                 Don't have an account? <Link to={'/signup'} style={{color:"blue", marginLeft:"10px"}}
                 onClick={navigateSignup} >Signup</Link>
               </div>
-              <div className="col-md-12" style={{display:"flex", justifyContent:"center", marginBottom:"10px", fontSize:"1.1rem"}}>
-                Forget Password? <Link to={'/forgetPassword'} style={{color:"blue", marginLeft:"10px"}}
-                onClick={navigateSignup} >Forget Password</Link>
-              </div>
               <div className=" col-md-12">
-                <button className="send" onClick={submitHandler} >Login</button>
+                <button className="send" onClick={submitHandler} >Send Email</button>
               </div>
             </div>
           </form>
@@ -95,4 +114,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default ForgetPassword

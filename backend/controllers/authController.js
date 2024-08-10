@@ -3,6 +3,7 @@ const User = require("../models/user");
 const {ErrorHandler, BaseService} = require("../utils/errorHandler");
 const sendToken = require("../utils/jwtToken");
 const APIError = require("../utils/errorHandler");
+const sendEmail = require("../utils/sendEmail");
 const HttpStatusCode = require("../utils/constants");
 
 exports.testing = async (req, res, next) =>{
@@ -105,4 +106,62 @@ exports.UserCount = async (req, res, next) => {
             message: err.message,
         });
     }
+}
+exports.forgetPassword = async (req, res, next) => {
+    console.log('Forget Password')
+    const user = await User.findOne({email : req.body.email});
+
+    if(!user) {
+        return next(new ErrorHandler("user not found with this email", 404));
+    }
+    const resetToken = await user.resetPassword();
+    // console.log("reset token" , resetToken);
+    await user.save({validateBeforeSave : false});
+    // console.log(process.env.FRONT_URL)
+    const resetUrl = `${process.env.FRONT_URL}/${resetToken}`;
+    const message = `You are receiving this email because you (or someone else) have requested the reset of the password for your account.\n\nPlease click on the following link to reset your password: \n\n${resetUrl}\n\nIf you did not request this, please ignore this email and your password will remain unchanged.\n`;
+    try {
+        await sendEmail({
+            email: user.email,
+            subject: 'Password Reset Request',
+            message
+        })
+        res.status(200).json({
+            success : true,
+            message : "An email has been sent to you with further instructions."
+        })
+    }
+    catch(err) {
+            user.resetPasswordExpire = undefined;
+            user.resetPassword = undefined;
+            await user.save({validateBeforeSave: false});
+
+            return next(new ErrorHandler(err.message, 500));
+
+        }
+
+}
+exports.resetPassword = async (req, res, next) => {
+    const resetPasswordToken = crypto.createHash('sha256').update(req.params.token).digest('hex');
+    console.log("reset password token")
+    const user = await User.findOne({
+        resetPasswordToken,
+        resetPasswordExpire : { $gt : Date.now() }
+    });
+
+    if(!user) {
+        return next(new ErrorHandler("Invalid Token", 400));
+    }
+    if(req.body.password !== req.body.confirmPassword) {
+        return next(new ErrorHandler("Passwords do not match", 400));
+    }
+    console.log("user reset")
+    user.password = req.body.password;
+    user.resetPasswordToken = undefined;
+    user.resetPasswordExpire = undefined;
+
+    await user.save();
+
+    sendToken(user , 200 , res);
+
 }

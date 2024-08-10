@@ -18,7 +18,6 @@ const userSchema = new mongoose.Schema({
   },
   phoneNo: {
     type: String,
-    required: [true, "Please enter your phone number"],
     maxLength: [15, "Your phone number cannot exceed 15 characters"],
   },
   password: {
@@ -69,7 +68,12 @@ userSchema.methods.getJwtToken = function () {
     expiresIn: process.env.JWT_EXPIRES_TIME,
   });
 };
-
+userSchema.methods.resetPassword =  async function() {
+  const token = crypto.randomBytes(20).toString('hex');
+  this.resetPasswordToken = crypto.createHash('sha256').update(token).digest('hex');
+  this.resetPasswordExpire = Date.now() + 20 * 60 * 1000;  //20 min
+  return token;
+}
 //Generate password reset token
 userSchema.methods.getResetPasswordToken = function () {
   //Generate token

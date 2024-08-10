@@ -23,6 +23,8 @@ import CreateBlog from "./components/admin/CreateBlog";
 import Qchat from "./components/Qchat/Qchat";
 import MchatASDTest from "./components/Mchat/Mchat";
 import {Toaster} from 'react-hot-toast';
+import ForgetPassword from "./components/login/ForgetPassword";
+import ResetPassword from "./components/login/ResetPassword";
 
 axios.defaults.baseURL = "http://localhost:4000";
 axios.defaults.withCredentials = true;
@@ -45,6 +47,8 @@ function App() {
 					<Route path="/product" element={<Product />} />
 					<Route path="/signup" element={<Signup />} />
 					<Route path="/login" element={<Login />} />
+					<Route path="/forgetpassword" element={<ForgetPassword />} />
+					<Route path="/:token" element={<ResetPassword />} />
 					<Route
 						path="/appointment"
 						element={<Appointment />}
