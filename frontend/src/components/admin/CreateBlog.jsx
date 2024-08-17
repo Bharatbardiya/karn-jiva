@@ -11,6 +11,7 @@ const CreateBlog = () => {
   const [blogTitle, setBlogTitle] = useState();
   const [blogContent, setBlogContent] = useState();
   const [category, setCategory] = useState("Hearing Care");
+  const [image, setImage] = useState(null);
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -36,6 +37,47 @@ const CreateBlog = () => {
       console.log("result : " + result);
     } catch (e) {
       alert("error");
+    }
+  };
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      if (file.type.startsWith("image/")) {
+        setImage(file);
+        
+      } else {
+        setImage(null);
+        alert("Please select an image file");
+      }
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!image) {
+      alert("Please select an image");
+      return;
+    }
+
+    const formData = new FormData();
+    formData.append("title", blogTitle);
+    formData.append("description", blogContent);
+    formData.append("image", image);
+    formData.append("category", category);
+
+    try {
+      await axios.post("/api/v1/createblog", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+      setBlogTitle("");
+      setBlogContent("");
+      setImage(null);
+      alert("Blog created successfully")
+    } catch (err) {
+      console.error("Error creating blog:", err);
+      alert("Error creating blog post");
     }
   };
 
@@ -95,10 +137,25 @@ const CreateBlog = () => {
                   required
                 ></textarea>
               </div>
+              <div className="col-md-9 mb-3">
+                    <label
+                      htmlFor="image"
+                      style={{ marginRight: "10px", fontWeight: "bolder" }}
+                    >
+                      Image:
+                    </label>
+                    <input
+                      type="file"
+                      id="image"
+                      accept="image/*"
+                      onChange={handleImageChange}
+                      required
+                    />
+                  </div>
               <button
                 type="submit"
                 className="btn btn-primary"
-                onClick={submitHandler}
+                onClick={handleSubmit}
               >
                 create blog
               </button>

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import '../Qchat/Qchat.css'; // Import custom styles
+import { Link, useNavigate } from "react-router-dom";
+
 
 const MchatASDTest = () => {
   const [formData, setFormData] = useState({});
@@ -8,6 +10,8 @@ const MchatASDTest = () => {
   const [isAnswered, setIsAnswered] = useState(false);
   const [apiResult, setApiResult] = useState(-1);
   const [apiMessage, setApiMessage] = useState("");
+  const navigate = useNavigate();
+
 
  const options = ["always", "usually", "sometimes", "rarely", "never"];
   const questionArray = [
@@ -157,7 +161,11 @@ const MchatASDTest = () => {
       setIsAnswered(true); // Assume previous question was answered when navigating back
     }
   };
-
+ const handleMchat = () => {
+  setApiResult(-1);
+  // navigate("/mchat")
+  window.location.reload();
+ }
   const handleSubmit = async (e) => {
     e.preventDefault();
     const positiveAnswer = ["A2", "A5", "A12"];
@@ -212,7 +220,7 @@ const MchatASDTest = () => {
             </div>
         </div>
         <div className="button-container">
-          {questionNo > 0 && (
+          {questionNo > 0 && apiResult === -1 && (
             <button type="button" className="prev-button" onClick={handlePrevious}>
               Previous
             </button>
@@ -234,7 +242,7 @@ const MchatASDTest = () => {
     <div className="row justify-content-center">
       <div className="col-md-6"></div>
             <div className="card">
-     <a className='btn btn-primary text-white mt-3 ml-3' style={{width:"100px"}} onClick={()=>(setApiResult(-1))}>Clear</a>
+     <a className='btn btn-primary text-white mt-3 ml-3' style={{width:"100px"}} onClick={()=>(handleMchat())}>Reset</a>
                 <div className="card-body">
                 <h5 className="card-title">Result</h5>
                 <p className="card-text">
