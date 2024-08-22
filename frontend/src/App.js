@@ -7,7 +7,6 @@ import Header from "./layout/Header";
 import Home from "./components/Home";
 import Blog from "./components/Blog";
 import Contact from "./components/Contact";
-import Product from "./components/Product";
 import About from "./components/About";
 import Login from "./components/login/Login";
 import Signup from "./components/signup/Signup";
@@ -22,7 +21,7 @@ import ShowAppointments from "./components/admin/ShowAppointment";
 import CreateBlog from "./components/admin/CreateBlog";
 import Qchat from "./components/Qchat/Qchat";
 import MchatASDTest from "./components/Mchat/Mchat";
-import BlogForm from "./components/CreateBlog";
+// import BlogForm from "./components/CreateBlog";
 import {Toaster} from 'react-hot-toast';
 import ForgetPassword from "./components/login/ForgetPassword";
 import ResetPassword from "./components/login/ResetPassword";
@@ -43,10 +42,8 @@ function App() {
 				<Routes>
 					<Route path="/" element={<Home />} />
 					<Route path="/blog" element={<Blog />} />
-					<Route path="/createblog" element={<BlogForm />} />
 					<Route path="/contact" element={<Contact />} />
 					<Route path="/about" element={<About />} />
-					<Route path="/product" element={<Product />} />
 					<Route path="/signup" element={<Signup />} />
 					<Route path="/login" element={<Login />} />
 					<Route path="/forgetpassword" element={<ForgetPassword />} />
@@ -61,10 +58,7 @@ function App() {
 					<Route path="/contactAdmin" element={<ContactDetails />} />
 					<Route path="/createBlogAdmin" element={<CreateBlog />} />
 					<Route path="/qchat" element={<Qchat />} />
-					{/* <Route
-						path="/admin/appointment"
-						element={<ShowAppointments />}
-					/> */}
+					
 					<Route path="/qchat" element= {<Qchat/>}/>
 					<Route path="/mchat" element= {<MchatASDTest/>} />
 				</Routes>

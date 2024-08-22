@@ -1,10 +1,8 @@
 import React, { Fragment, useEffect, useState } from "react";
 import axios from "axios";
 import BlogLayout from "./BlogLayout";
-import { useNavigate } from "react-router-dom";
 
 const Blog = () => {
-  const navigate = useNavigate();
 
   const [blogArrayC1, setBlogArray1] = useState([]);
   const [blogArrayC2, setBlogArray2] = useState([]);
@@ -15,9 +13,9 @@ const Blog = () => {
     getData();
   }, []);
 
-  const routeToCreateBlog = () => {
-    navigate("/createblog");
-  }
+  // const routeToCreateBlog = () => {
+  //   navigate("/createblog");
+  // }
   const getData = async () => {
     try {
       const { data } = await axios.get("/api/v1/getAllBlogs");
@@ -116,11 +114,6 @@ const Blog = () => {
                   }}
                 >
                   Occupational Therapy
-                </div>
-              </div>
-              <div className="titlepage create-blog-row" >
-                <div className="create-blog-row-select btn btn-primary" onClick={()=>routeToCreateBlog()}>
-                  Create a New Blog
                 </div>
               </div>
             </div>
