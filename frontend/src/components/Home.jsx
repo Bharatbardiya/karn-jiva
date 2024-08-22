@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import KarnJivaTeam from "./Karn/KarnJivaTeam";
+import Therapy from "./therepy";
 const Home = () => {
   return (
     <Fragment>
@@ -25,7 +26,7 @@ const Home = () => {
       </section>
     </div>
      
-
+    
       {/* CHOOSE  */}
       <div className="whyschose">
         <div className="container">
@@ -42,7 +43,8 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="choose_bg">
+      <Therapy />
+      {/* <div className="choose_bg">
         <div className="container">
           <div className="white_bg">
             <div className="row">
@@ -85,7 +87,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* end CHOOSE */}
       {/* service */}
       <KarnJivaTeam/>
