@@ -91,8 +91,9 @@ const CreateBlog = () => {
             <h1 className="my-3 col-12 col-lg-8 mx-auto">Create Blogs</h1>
 
             <form className="col-12 col-lg-8 mx-auto contact-form">
-              <label className="form-label">select category</label>
+              <label className="form-label" htmlFor="category-selector">select category</label>
               <select
+              id="category-selector"
                 className="form-select form-select-lg"
                 aria-label=".form-select-sm example"
                 name="status"
