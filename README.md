@@ -27,7 +27,7 @@ project │
 ### 1. Clone the Repository
 
 ```bash
-https://github.com/Bharatbardiya/karn-jiva.git
+git clone https://github.com/Bharatbardiya/karn-jiva.git
 cd karn-jiva
 ```
 
