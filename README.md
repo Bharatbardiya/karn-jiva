@@ -27,8 +27,8 @@ project │
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/your-repository.git
-cd your-repository
+https://github.com/Bharatbardiya/karn-jiva.git
+cd karn-jiva
 ```
 
 ### 2. Install Dependencies
