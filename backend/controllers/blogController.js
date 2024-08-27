@@ -6,6 +6,7 @@ const ErrorHandler = require("../utils/errorHandler");
 const sendEmail = require("../utils/sendEmail");
 const multer = require("multer");
 const path = require('path');
+const fs = require('fs');
 // api/v1/addReview
 exports.addBlog = async (req, res, next) => {
     try {
@@ -178,5 +179,26 @@ exports.createBlog =async (req, res) => {
       res.status(201).json({ message: 'Post created successfully', post });
     } catch (error) {
       res.status(500).json({ message: 'Error creating post', error });
+    }
+}
+
+exports.deleteBlog = async(req, res) => {
+    const id = req.params.id;
+    try{
+        console.log(id, typeof id);
+        const item = await Blog.findById(id);
+        image_name = item.imagePath;
+        let image_path = 'frontend/public/uploads/'+image_name;
+
+        fs.unlink(image_path, (err) => {
+            if (err) {
+                console.error(`Error deleting image: ${JSON.stringify(err)}`);
+            }
+        });
+
+        const response = await Blog.findByIdAndDelete(item._id);
+        return res.status(200).json({message: 'Post deleted successfully', data : response});
+    } catch(error){
+        return res.status(500).json({message: `Error deleting post: ${error}`});
     }
 }
