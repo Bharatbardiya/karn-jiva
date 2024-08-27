@@ -10,13 +10,19 @@ import Sidebar from "./Sidebar";
 const ContactDetails = () => {
 	const [contactData, setContactData] = useState([]);
 	const [deleteData, setDeleteData] = useState(false);
-	const [show, setShow] = useState(false);
+	// const [show, setShow] = useState(false);
 
-	const handleClose = () => setShow(false);
-	const handleShow = () => setShow(true);
+	const handleShow = (status, index) => {
+		setShow((prevArray) => {
+			const newArray = [...prevArray];
+			newArray[index] = status;
+			return newArray;
+		});
+	};
 	useEffect(() => {
 		getData();
 	}, [deleteData]);
+	const [show, setShow] = useState([]);
 
 	const getData = async () => {
 		try {
@@ -55,7 +61,7 @@ const ContactDetails = () => {
 			],
 			rows: [],
 		};
-		contactData?.forEach((contact) => {
+		contactData?.forEach((contact,index) => {
 			data.rows.push({
 				name: contact?.name,
 				email: contact?.email,
@@ -68,10 +74,10 @@ const ContactDetails = () => {
 				//     : <p style={{ color: 'red' }}>{order.orderStatus}</p>,
 				actions: (
 					<Fragment>
-						<Link className="btn btn-primary py-1 px-2" onClick={() => setShow(true)}>
+						<Link className="btn btn-primary py-1 px-2" onClick={() => handleShow(true, index)}>
 							<i className="fa fa-eye"></i>
 						</Link>
-							<Modal show={show} onHide={handleClose} size="lg"
+							<Modal show={show[index]} onHide={() => handleShow(false, index)} size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered>
 								<Modal.Header closeButton>
@@ -86,7 +92,7 @@ const ContactDetails = () => {
 								<Modal.Footer>
 									<Button
 										variant="secondary"
-										onClick={() => setShow(false)}
+										onClick={() => handleShow(false, index)}
 									>
 										Close
 									</Button>
