@@ -111,6 +111,38 @@ exports.bookAppointment = async (req, res, next) => {
         return next(new ErrorHandler(error.message, 500));
     }
 };
+exports.AcceptAppointment = async (req, res, next) => {
+    try {
+        const { email , status } = req.body;
+        console.log("appointment: "+ email)
+        console.log("appointment: "+ status)
+
+        // const appointment = await Appointment.create({
+        //     loginUser: user.name,
+        //     loginEmail: user.email,
+        //     name: formData.,
+        //     email: formData.Email,
+        //     phoneNo: formData.PhoneNo,
+        //     fromDate: formData.Date1,
+        //     toDate: formData.Date2,
+        //     serviceType: formData.Service,
+        //     message: formData.Message,
+        // });
+        const message = status ? "Your appointment has been accepted. We look forward to seeing you!" : "Unfortunately, your appointment request has been rejected. Please try rescheduling or contact us for further assistance."
+        // const message = ``;
+        await sendEmail({
+            email: email ,
+            subject: 'Appointment Status',
+            message
+        })
+        res.status(200).json({
+            success : true,
+            message : message
+        })
+    } catch (error) {
+        return next(res.status(500).json({ error: error}));
+    }
+};
 exports.findAppointment = async (req, res, next) => {
     try {
         console.log("findAppointment called");
