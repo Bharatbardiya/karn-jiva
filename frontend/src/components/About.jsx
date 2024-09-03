@@ -8,10 +8,10 @@ const About = () => {
 				<div className="container">
 					<div className="row">
 						<dir className="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-							<div className="about_box">
+							<div className="about_box" style={{width:"80%"}}>
 								<figure>
 									<img
-										src="assets/images/home-img4.png"
+										src="assets/images/program/program_collage.png"
 										alt="image"
 									/>
 								</figure>

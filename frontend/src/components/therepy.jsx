@@ -16,10 +16,10 @@ export default function Therapy() {
                     <MDBCarousel showControls dark>
                         <MDBCarouselItem className="active text-center">
                             <img
-                                src="https://picsum.photos/id/1/200/200"
+                                src="assets/images/services/hearing_test.jpeg"
                                 alt="avatar"
-                                className="rounded-circle shadow-1-strong mb-4"
-                                style={{ width: "150px" }}
+                                className="shadow-1-strong mb-4"
+                                style={{ width: "300px" }}
                             />
                             <MDBRow className="d-flex justify-content-center">
                                 <MDBCol lg="8">
@@ -35,10 +35,10 @@ export default function Therapy() {
 
                         <MDBCarouselItem className="text-center">
                             <img
-                                src="https://picsum.photos/id/1/200/200"
+                                src="assets/images/services/speech_therap.jpeg"
                                 alt="avatar"
-                                className="rounded-circle shadow-1-strong mb-4"
-                                style={{ width: "150px" }}
+                                className="shadow-1-strong mb-4"
+                                style={{ width: "300px" }}
                             />
                             <MDBRow className="d-flex justify-content-center">
                                 <MDBCol lg="8">
@@ -55,10 +55,10 @@ export default function Therapy() {
 
                         <MDBCarouselItem className="text-center">
                             <img
-                                src="https://picsum.photos/id/1/200/200"
+                                src="assets/images/services/hearing_test.jpeg"
                                 alt="avatar"
-                                className="rounded-circle shadow-1-strong mb-4"
-                                style={{ width: "150px" }}
+                                className="shadow-1-strong mb-4"
+                                style={{ width: "300px" }}
                             />
                             <MDBRow className="d-flex justify-content-center">
                                 <MDBCol lg="8">

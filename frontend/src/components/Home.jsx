@@ -10,7 +10,7 @@ const Home = () => {
   <div id="main_slider" className="carousel slide banner-main" data-ride="carousel">
     <div className="carousel-inner">
       <div className="carousel-item active">
-        <img className="first-slide" src="assets/images/banner2.jpeg" alt="First slide" style={{width:"100%"}}/>
+        <img className="first-slide" src="assets/images/activity/activity_collage.png" alt="First slide" style={{width:"100%"}}/>
         <div className="container">
           <div className="carousel-caption relative">
             <h1 style={{textAlign:"left"}}>Karn Jiva<br /> <strong className="black_bold">Hearing </strong><br />
