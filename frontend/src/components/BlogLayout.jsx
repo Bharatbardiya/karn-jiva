@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector } from "react-redux";
 import axios from 'axios';
 
 function BlogLayout({blogArray}) {
     console.log(blogArray);
+    const { user } = useSelector((state) => state.auth);
 
+    useEffect(()=>{
+    }, [user])
     const deleteHandler = (id) => {
 
       if(window.confirm("Delete the Blog?")){
@@ -29,7 +33,7 @@ function BlogLayout({blogArray}) {
               <h3>{val.blogTitle}</h3>
               <span>{val.category}</span>
               <p>{val.blogContent} </p>
-              <button className='btn btn-danger mb-3 ml-3' onClick={() => deleteHandler(val._id)}>delete</button>
+              {user && user?.role==="admin" && <button className='btn btn-danger mb-3 ml-3' onClick={() => deleteHandler(val._id)}>delete</button>}
             </div>
           </div>
         ))}
