@@ -51,24 +51,25 @@ const KarnJivaTeam = () => {
               <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div className="service-box">
                   <i>
-                  <img src="assets/images/team/image4.png" alt='image'/>
+                  <img src="assets/images/team/image10.jpg" alt='image'/>
                   </i>
-                  <h3>Dr. Saloni</h3>
+                  <h3>Dr. Tushar Verma</h3>
                   <p>
                     Occupational Therapist <br/>
-                    BOT
+                    BOT,MOT
                   </p>
                 </div>
               </div>
               <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12">
                 <div className="service-box">
                   <i>
-                  <img src="assets/images/team/image5.jpeg" alt='image'/>
+                  <img src="assets/images/team/image9.jpg" alt='image'/>
                   </i>
-                  <h3>Dr. Anjali Verma</h3>
+                  <h3>Rincy Raj
+                </h3>
                   <p>
-                    Occupational Therapist <br/>
-                    BOT
+                  Speech language Pathologist <br/>
+                  BASLP,MSc Speech
                   </p>
                 </div>
               </div>
@@ -93,6 +94,43 @@ const KarnJivaTeam = () => {
                   <p>
                   Physiotherapist <br/>
                     MPT
+                  </p>
+                </div>
+              </div>
+              <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                <div className="service-box">
+                  <i>
+                  <img src="assets/images/team/image8.jpg" alt='image'/>
+                  </i>
+                  <h3>Tanisha Rathore</h3>
+                  <p>
+                  Certified Cognitive Behaviour Therapy Practitioner
+                   <br/>RCI Licensed Clinical Psychologist 
+                    MPT
+                  </p>
+                </div>
+              </div>
+              <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                <div className="service-box">
+                  <i>
+                  <img src="assets/images/team/image13.jpg" alt='image'/>
+                  </i>
+                  <h3>Gautam Prajapat</h3>
+                  <p>
+                  Special Educator 
+                    
+                  </p>
+                </div>
+              </div>
+              <div className="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                <div className="service-box">
+                  <i>
+                  <img src="assets/images/team/image12.jpg" alt='image'/>
+                  </i>
+                  <h3>Dr Komal Sharma</h3>
+                  <p>
+                  Occupational Therapist <br/>BOT,MOT
+                    
                   </p>
                 </div>
               </div>
