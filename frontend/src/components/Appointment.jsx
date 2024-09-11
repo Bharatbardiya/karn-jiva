@@ -196,14 +196,30 @@ const Appointment = () => {
                                         <option value={"select"} defaultChecked>
                                             Select Service
                                         </option>
-                                        <option value={"Hearing Care"}>
-                                            Hearing Care
+                                        <option value={"Hearing Assessment & Hearing Aids"}>
+                                        Hearing Assessment & Hearing Aids 
+
                                         </option>
                                         <option value={"Speech Therapy"}>
                                             Speech Therapy
                                         </option>
                                         <option value={"Occupational Therapy"}>
                                             Occupational Therapy
+                                        </option>
+                                        <option value={"Vestibular Evaluation & Rehabilitation "}>
+                                        Vestibular Evaluation & Rehabilitation 
+                                        </option>
+                                        <option value={"ABA Therapy / Behavioral Therapy"}>
+                                        ABA Therapy / Behavioral Therapy
+                                        </option>
+                                        <option value={"⁠Psychological Evaluation"}>
+                                        ⁠Psychological Evaluation 
+                                        </option>
+                                        <option value={"Physiotherapy "}>
+                                        Physiotherapy 
+                                        </option>
+                                        <option value={"Special Education "}>
+                                        Special Education
                                         </option>
                                     </select>
                                 </div>
