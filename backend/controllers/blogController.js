@@ -196,7 +196,7 @@ exports.storage = multer.diskStorage({
 exports.createBlog =async (req, res) => {
     const { title, description, category } = req.body;
     const imagePath = req.file.path;
-    image_name = imagePath.split('\\').slice(-1)[0]
+    image_name = imagePath.split('/').slice(-1)[0]
     console.log(req.file.path)
     console.log(req.body)
     try {

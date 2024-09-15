@@ -10,7 +10,7 @@ import Sidebar from "./Sidebar";
 const CreateBlog = () => {
   const [blogTitle, setBlogTitle] = useState();
   const [blogContent, setBlogContent] = useState();
-  const [category, setCategory] = useState("Hearing Care");
+  const [category, setCategory] = useState("Hearing Assessment & Hearing Aids");
   const [image, setImage] = useState(null);
 
   const submitHandler = async (e) => {
@@ -100,11 +100,14 @@ const CreateBlog = () => {
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
               >
-                <option value="Hearing Care">Hearing Care</option>
+                <option value="Hearing Assessment & Hearing Aids">Hearing Assessment & Hearing Aids</option>
+                <option value="Vestibular Evaluation & Rehabilitation">Vestibular Evaluation & Rehabilitation </option>
                 <option value="Speech Therapy">Speech Therapy</option>
-                <option value="Occupational Therapy">
-                  Occupational Therapy
-                </option>
+                <option value="Occupational Therapy">Occupational Therapy</option>
+                <option value="ABA Therapy / Behavioral Therapy">ABA Therapy / Behavioral Therapy</option>
+                <option value="Psychological Evaluation">Psychological Evaluation</option>
+                <option value="Physiotherapy">Physiotherapy</option>
+                <option value="Special Education">Special Education</option>
               </select>
               <div className="mb-3 mt-3">
                 <label

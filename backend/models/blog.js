@@ -15,7 +15,7 @@ const blogSchema = new mongoose.Schema({
     type: String,
     required: [true, "Please select kind of blog"],
     enum: {
-      values: ["Hearing Care", "Speech Therapy", "Occupational Therapy"],
+      values: ["Hearing Assessment & Hearing Aids", "Speech Therapy", "Occupational Therapy", "Vestibular Evaluation & Rehabilitation", "ABA Therapy / Behavioral Therapy", "Psychological Evaluation", "Physiotherapy", "Special Education"],
       message: "Please select correct category for product",
     },
   },
